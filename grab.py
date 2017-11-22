@@ -5,13 +5,17 @@ import time
 
 def process_image(image):
     processed_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-    processed_image = cv2.Canny(processed_image, threshold1=200, threshold2=300)
+    # processed_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGBA)
+    processed_image = cv2.Canny(processed_image, threshold1=150, threshold2=150)
     return processed_image
 
 def screen_record():
     last_time = time.time()
+    x = 700
+    y = 600
+    dx, dy = 650, 500
     while True:
-        screen = np.array(ImageGrab.grab(bbox=(0,200,2048,1536)))
+        screen = np.array(ImageGrab.grab(bbox=(x, y, x + dx, y + dy)))
         print('loop took {} sec'.format(time.time()-last_time))
         last_time = time.time()
         new_screen = process_image(screen)
