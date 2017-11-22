@@ -6,7 +6,8 @@ import time
 def process_image(image):
     processed_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     # processed_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGBA)
-    processed_image = cv2.Canny(processed_image, threshold1=150, threshold2=150)
+    processed_image = cv2.Canny(processed_image, threshold1=200, threshold2=300)
+    processed_image = cv2.GaussianBlur(processed_image, (5,5), 0)
     return processed_image
 
 def screen_record():
