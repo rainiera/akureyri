@@ -1,0 +1,159 @@
+    1  sudo apt-get update
+    2  git
+    3  sudo apt install git
+    4  which python
+    5  sudo apt-get -y upgrade
+    6  python3 -V
+    7  sudo apt-get install -y python3-pip
+    8  sudo apt-get install build-essential libssl-dev libffi-dev python-dev
+    9  which python
+   10  which python3
+   11  sudo apt-get install -y python3-venv
+   12  ls
+   13  cd Desktop/
+   14  ls
+   15  git
+   16  which git
+   17  python3 -m venv nn
+   18  ls
+   19  ls nn
+   20  source nn/bin/activate
+   21  which python
+   22  python
+   23  which pip
+   24  pip install tensorflow
+   25  pip install jupyter
+   26  python -c "import tensorflow"
+   27  jupyter notebook
+   28  vim
+   29  sudo apt install vim
+   30  git clone https://github.com/philkr/supertuxkart.git
+   31  cd supertuxkart/
+   32  mkdir build
+   33  cd build
+   34  cmake ..
+   35  sudo apt install cmake
+   36  ls
+   37  cmake ..
+   38  exit
+   39  cd Desktop/supertuxkart/
+   40  vim /home/rainier/Desktop/supertuxkart/build/CMakeFiles/CMakeOutput.log
+   41  ls
+   42  cd build
+   43  ls
+   44  make -j9
+   45  cmake ..
+   46  exit
+   47  sudo apt-get install cmake libblkid-dev e2fslibs-dev libboost-all-dev libaudit-dev
+   48  cd Desktop/supertuxkart/
+   49  ls
+   50  cd build/
+   51  cmake ..
+   52  sudo apt-get install freeglut3-dev
+   53  exit
+   54  cd Desktop/supertuxkart/build/
+   55  cmake ..
+   56  exit
+   57  sudo apt-get install build-essential cmake libbluetooth-dev libcurl4-gnutls-dev libfreetype6-dev libfribidi-dev libgl1-mesa-dev libjpeg-dev libogg-dev libopenal-dev libpng-dev libvorbis-dev libxrandr-dev mesa-common-dev pkg-config zlib1g-dev
+   58  exit
+   59  cd Desktop/supertuxkart/build/
+   60  cmake ..
+   61  cd ~/Desktop/
+   62  ls
+   63  source nn/bin/activate
+   64  pip freeze
+   65  cd supertuxkart/build/
+   66  cmake ..
+   67  sudo apt-get install python-numpy
+   68  make clean
+   69  cd ..
+   70  ls
+   71  exit
+   72  cd Desktop/
+   73  source nn/bin/activate
+   74  cd supertuxkart/build/
+   75  cmake ..
+   76  ls
+   77  vim CMakeCache.txt 
+   78  cd ..
+   79  ls
+   80  vim CMakeLists.txt 
+   81  cd src/
+   82  ls
+   83  cd ..
+   84  cd pykart/
+   85  ls
+   86  vim FindNumPy.cmake 
+   87  which python
+   88  cd /home/rainier/Desktop/nn/
+   89  ls
+   90  cd lib
+   91  ls
+   92  cd python3.5/
+   93  ls
+   94  cd site-packages/
+   95  ls
+   96  cd numpy
+   97  ls
+   98  cd core/
+   99  ls
+  100  cd include/
+  101  ls
+  102  pwd
+  103  cd ~/Desktop/
+  104  cd supertuxkart/
+  105  cd pykart/
+  106  ls
+  107  vim CMakeLists.txt 
+  108  ls
+  109  vim FindNumPy.cmake 
+  110  cd ..
+  111  cd build/
+  112  cmake ..
+  113  cd ..
+  114  ls
+  115  sudo rm -r build/
+  116  mkdir build
+  117  cd build
+  118  cmake ..
+  119  vim ../pykart/FindNumPy.cmake 
+  120  cmake ..
+  121  make -j9
+  122  git status
+  123  ls
+  124  cd pykart/
+  125  ls
+  126  cd ../../pykart/
+  127  ls
+  128  pykart
+  129  vim __main__.py 
+  130  python __main__.py 
+  131  pwd
+  132  cd ..
+  133  ls
+  134  cd build
+  135  ls
+  136  cd bin
+  137  ls
+  138  ls -al
+  139  cp supertuxkart ../../pykart/
+  140  cd ../../pykart/
+  141  ls
+  142  python __main__.py 
+  143  vim __main__.py 
+  144  ls
+  145  vim __init__.py 
+  146  vim pykart.cpp 
+  147  vim __main__.py 
+  148  grep -r "pylab" .
+  149  vim __main__.py 
+  150  pip freeze
+  151  pip install matplotlib
+  152  which pip
+  153  which python
+  154  python __main__.py 
+  155  sudo apt-get install python3-tk
+  156  python __main__.py 
+  157  ps aux | grep pytu
+  158  git status
+  159  history > ~/Desktop/history.txt
