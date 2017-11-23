@@ -3,7 +3,33 @@ import random
 import pyautogui
 
 TUX_SNIP = 'tux_snip.png'
+
+# pyautogui keyboard consts
 U, D, L, R, F, N = 'up', 'down', 'left', 'right', ' ', 'n'
+
+# Since pyautogui calls have side effects, we wrap them. (painful to write but works)
+Uu = lambda: pyautogui.keyUp(U)
+Ud = lambda: pyautogui.keyDown(U)
+Du = lambda: pyautogui.keyUp(D)
+Dd = lambda: pyautogui.keyDown(D)
+Lu = lambda: pyautogui.keyUp(L)
+Ld = lambda: pyautogui.keyDown(L)
+Ru = lambda: pyautogui.keyUp(R)
+Rd = lambda: pyautogui.keyDown(R)
+
+# TODO: go further and wrap time sleep pre-keyUp
+Ts4 = lambda: time.sleep(4)
+
+# to call in succession:
+# insts = [Ud, Ld, Ld, Lu]
+# map(lambda inst: inst.__call__(), insts)
+
+def imm_force_key_up():
+    Uu()
+    Du()
+    Lu()
+    Ru()
+    print("All the way up!")
 
 def whereami():
     print('accessible positive window size is {}'.format(pyautogui.size()))
@@ -54,7 +80,6 @@ def nostratdamus():
     pyautogui.keyUp(U)
     # :(
     # ctrls = [U, L, R]
-    # ud_ctrls = map(lambda x: pyautogui.keyDown(x), ctrls).extend(map(lambda x: pyautogui.keyUp(x), ctrls))
     # print(ud_ctrls)
     # num_insts = 100
     # with open('ctrl.txt', 'w') as fhandle:
