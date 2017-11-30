@@ -6,10 +6,18 @@ import cv2
 
 from PIL import ImageGrab
 
+def oneoff():
+    fn = "training/1122_191356_183.png"
+    processed_image = cv2.imread(fn, 0)
+    t1 = 100
+    t2 = 100
+    processed_image = cv2.Canny(processed_image, threshold1=t1, threshold2=t2)
+    processed_image = cv2.GaussianBlur(processed_image, (3,3), 0)
+    cv2.imwrite('test_{}_{}.jpg'.format(t1, t2), processed_image)
+
 def process_image(image):
-    processed_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     # processed_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGBA)
-    processed_image = cv2.Canny(processed_image, threshold1=200, threshold2=300)
+    processed_image = cv2.Canny(image, threshold1=200, threshold2=300)
     processed_image = cv2.GaussianBlur(processed_image, (5,5), 0)
     return processed_image
 
